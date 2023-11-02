@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <input id="inputbar" placeholder="input your task here " value="">
+    <ol id="ullits">
+       
+    </ol>
+</body>
+<script>
+    let inputField = document.querySelector("#inputbar");
+    let list = document.querySelector("#ullits");
+
+    inputField.addEventListener("keydown", function (event) {
+        // console.log("input fields event called");
+        // console.log(event.key);
+
+        // console.log(inputField.value);
+
+        if (event.key == "Enter" && inputField.value != '') {
+            let newitem = document.createElement("li");
+
+            newitem.innerHTML = inputField.value + '<span class="material-symbols-outlined">delete</span>';
+
+            let deleteIcon = newitem.querySelector("span");
+
+            deleteIcon.addEventListener("dblclick", function () {
+                newitem.remove();
+            })
+
+            list.appendChild(newitem);
+
+            inputField.value = "";
+
+
+        }
+    })
+</script>
+
+</html>

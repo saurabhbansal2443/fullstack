@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        background-color: cornflowerblue;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: grid;
+        width: 306px;
+        height: 306px;
+        border: 2px solid black;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+    }
+
+    .box {
+        height: 100px;
+        width: 100px;
+        border: 1px solid red;
+        background-color: black;
+
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">5</div>
+        <div class="box" id="box6">6</div>
+        <div class="box" id="box7">7</div>
+        <div class="box" id="box8">8</div>
+        <div class="box" id="box9">9</div>
+    </div>
+</body>
+<script>
+    // let box3 = document.querySelector("#box3");
+
+    // box3.addEventListener("click",function(){
+    //     box3.classList.toggle("red");
+    // })
+
+    // let boxes = document.querySelectorAll(".box");
+
+    // for (let i = 0; i < boxes.length; i++) {
+    //     boxes[i].addEventListener("click", function () {
+    //         boxes[i].classList.toggle("red");
+    //     })
+    // }
+    let container = document.querySelector('.container');
+
+    container.addEventListener("click",function(event){
+       let mybox = event.target;
+       mybox.classList.toggle("red");
+      
+    })
+</script>
+
+</html>
