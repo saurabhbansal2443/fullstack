@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mainContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .ticket{
+        border: 2px solid red ;
+        height: 200px ;
+        width: 300px;
+        padding: 2%;
+
+    }
+</style>
+<body>
+    <div class="inputContainer">
+       
+        <input type="text" class="PropertyName" placeholder="Name" value="">
+        <input type="number" class="Price" placeholder="Price" value="">
+        <input type="text" class="Location" placeholder="location" value="">
+    </div>
+    <br>
+   
+    <br>
+    <div class="btncont">
+        <button class="create"> Create </button>
+        <button class="delete"> Delete </button>
+    </div>
+
+    <div class="mainContainer">
+       
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
+<script src="script.js"></script>
+</html>
