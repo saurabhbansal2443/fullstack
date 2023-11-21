@@ -20,15 +20,24 @@
 // ++z;
 // console.log(z);
 
-let a = 60 ;
+// let a = 60 ;
 
-a+=100; // a = a+ 100
+// a+=100; // a = a+ 100
 
-a-=100 // a= a- 100 ;
+// a-=100 // a= a- 100 ;
 
-a*=100 // a= a*100;
+// a*=100 // a= a*100;
 
-a/=100 // a= a/100
+// a/=100 // a= a/100
 
 
-console.log(a);
+// console.log(a);
+
+
+for(let i=0;i<3;i++){
+    console.log(i);
+}
+
+for(var i=0;i<3;i++){
+    console.log(i);
+}

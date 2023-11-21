@@ -17,7 +17,7 @@ window.addEventListener("load",function(){
 
         
 
-        for(let i=0;i<arr.length-3;i+=3){
+        for(let i=0;i<arr.length-2;i+=3){
             let ele = this.document.createElement("div");
             ele.innerHTML = `<div  class="ticket" >
 
