@@ -1,27 +1,32 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import pdf from "./Images/resume.pdf";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  console.log(props.dark);
+  let light = "navbar navbar-expand-lg  bg-body-tertiary";
+  let dark = "navbar navbar-expand-lg  navbar-dark bg-dark ";
   return (
-    <nav className="navbar navbar-expand-lg bg-bg-body-tertiary bg-transparent position-fixed ">
+    <nav className={props.dark==true ? dark : light}  >
   <div className="container-fluid">
-    <Link className="navbar-brand text-white" to="/">SaurabhBansal</Link>
+    <Link className="navbar-brand " to="/">SaurabhBansal</Link>
     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon "></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link className="nav-link active text-white" aria-current="page" to="#">Resume</Link>
+          <a className="nav-link active " aria-current="page" href={pdf} target="_blank">Resume</a>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/project">Projects</Link>
+          <Link className="nav-link " to="/project" >Projects</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/contact">Contact Us </Link>
+          <Link className="nav-link " to="/contact">Contact Us </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/about">About  </Link>
+          <Link className="nav-link " to="/about">About  </Link>
         </li>
       </ul>
     </div>
