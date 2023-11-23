@@ -5,11 +5,12 @@ import pdf from "./Images/resume.pdf";
 const Navbar = (props) => {
 
   console.log(props.dark);
-  let light = "navbar navbar-expand-lg  bg-body-tertiary";
+  let light = "navbar navbar-expand-lg  bg-body-tertiary ";
   let dark = "navbar navbar-expand-lg  navbar-dark bg-dark ";
+  let color = " navbar navbar-expand-lg navbar-light ";
   return (
-    <nav className={props.dark==true ? dark : light}  >
-  <div className="container-fluid">
+    <nav className={props.dark==true ? dark : light} >
+  <div className="container-fluid" >
     <Link className="navbar-brand " to="/">SaurabhBansal</Link>
     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon "></span>
