@@ -4,18 +4,26 @@ import Projects from "./Projects"
 import About from "./About"
 import ContactMe from "./ContactMe"
 import { Route, Routes } from "react-router-dom"
+import { useContext, useState } from "react"
+import Theme from "./Theme"
+import { th } from "./Theme"
+
 function App() {
   
+ 
 
+let the = useContext(th);
+let {theme,setTheme} = the;
+
+console.log(the , "from apjs");
   return (
     <>
-    
-     
+    <Navbar th={{theme,setTheme}} ></Navbar>
      <Routes>
-      <Route path="/" element={<>  <Navbar dark={true} ></Navbar> <Home></Home></>}> </Route>
-      <Route path="/about" element={<> <Navbar dark={false} ></Navbar> <About></About></>}> </Route>
-      <Route path="/project" element={<><Navbar dark={false} ></Navbar>  <Projects></Projects></>}> </Route>
-      <Route path="/contact" element={<><Navbar dark={false} ></Navbar> <ContactMe></ContactMe></>}> </Route>
+      <Route path="/" element={<>   <Home th={{theme,setTheme}} ></Home></>}> </Route>
+      <Route path="/about" element={<>  <About th={{theme,setTheme}} ></About></>}> </Route>
+      <Route path="/project" element={<>  <Projects th={{theme,setTheme}} ></Projects></>}> </Route>
+      <Route path="/contact" element={<><ContactMe th={{theme,setTheme}} ></ContactMe></>}> </Route>
      </Routes>
      
     </>

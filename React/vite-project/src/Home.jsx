@@ -1,9 +1,10 @@
 import React from "react";
 import "./Home.css";
 
-const Home = () => {
+const Home = ({th}) => {
+  console.log(th, "from homecard ")
   return (
-    <div className="main">
+    <div className="main" style={{backgroundColor:th.theme=="light"?"rgb(153, 185, 245)" : "black"}}>
       <h1>
         <span> Saurabh Bansal</span>
         <div className="message">

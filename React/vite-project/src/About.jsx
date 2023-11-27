@@ -1,8 +1,8 @@
 import React from "react";
 
-const About = () => {
+const About = ({th}) => {
   return (
-    <div>
+    <div className="vh-100"style={{backgroundColor:th.theme=="light"?"white" : "#435585" , color:th.theme=="light"?"black":"white"}}>
       <section className="py-3 py-md-5 py-xl-8">
         <div className="container">
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">

@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-const Projects = () => {
+const Projects = ({th}) => {
   let p1 = {
     imageLink : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvoepvuPOUAdZrY-BKITIPcAjDxnVIgkXskA&usqp=CAU",
     projectTittle : "Tic-Tac-Toe",
@@ -10,18 +10,18 @@ const Projects = () => {
   }
   
   return (
-    <div className="d-flex flex-wrap justify-content-around gap-3 my-3">
+    <div className="d-flex flex-wrap justify-content-around py-3 gap-3  w-100 vh-100" style={{backgroundColor:th.theme=="light"?"#f8f9fa" : "#212529"}}>
       
-      <ProjectCard project={p1}></ProjectCard>
-      <ProjectCard></ProjectCard>
+      <ProjectCard project={p1} th={th}></ProjectCard>
+      <ProjectCard th={th}></ProjectCard>
 
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
+      <ProjectCard th={th}></ProjectCard>
+      <ProjectCard th={th}></ProjectCard>
+      <ProjectCard th={th}></ProjectCard>
 
-       <ProjectCard></ProjectCard>
-       <ProjectCard></ProjectCard>
-       <ProjectCard></ProjectCard>
+       <ProjectCard th={th}></ProjectCard>
+       <ProjectCard th={th}></ProjectCard>
+       <ProjectCard th={th}></ProjectCard>
     </div>
   )
 }

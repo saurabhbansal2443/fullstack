@@ -2,14 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import pdf from "./Images/resume.pdf";
 
-const Navbar = (props) => {
+const Navbar = ({th}) => {
 
-  console.log(props.dark);
+  // console.log(props.dark);
   let light = "navbar navbar-expand-lg  bg-body-tertiary ";
   let dark = "navbar navbar-expand-lg  navbar-dark bg-dark ";
-  let color = " navbar navbar-expand-lg navbar-light ";
   return (
-    <nav className={props.dark==true ? dark : light} >
+    <nav className={th.theme=="light" ? light : dark} >
   <div className="container-fluid" >
     <Link className="navbar-brand " to="/">SaurabhBansal</Link>
     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +29,9 @@ const Navbar = (props) => {
           <Link className="nav-link " to="/about">About  </Link>
         </li>
       </ul>
+      
     </div>
+    <button style={{textTransform:"capitalize"}} type="button" className="btn btn-secondary " onClick={()=>th.theme=="light"?th.setTheme("dark"):th.setTheme("light")}> {th.theme} </button>
   </div>
 </nav>
   )
