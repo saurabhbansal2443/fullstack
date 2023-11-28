@@ -1,8 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "./Theme";
+
 
 const About = ({th}) => {
+  let {theme,setTheme} = useContext(ThemeContext)
   return (
-    <div className="vh-100"style={{backgroundColor:th.theme=="light"?"white" : "#435585" , color:th.theme=="light"?"black":"white"}}>
+    <div className="vh-100"style={{backgroundColor:theme=="light"?"white" : "#435585" , color:theme=="light"?"black":"white"}}>
       <section className="py-3 py-md-5 py-xl-8">
         <div className="container">
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">

@@ -1,6 +1,10 @@
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "./Theme";
 
 const ProjectCard = ({project , th }) => {
+
+  let {theme,setTheme} = useContext(ThemeContext)
   
     let p = {
         imageLink : "",
@@ -15,7 +19,7 @@ const ProjectCard = ({project , th }) => {
    console.log(th, "from project card ")
   return (
     <div>
-      <div className="card" style={{width: "18rem" , backgroundColor:th.theme=="light"?"white" : "#435585" , color:th.theme=="light"?"black":"white"}}>
+      <div className="card" style={{width: "18rem" , backgroundColor:theme=="light"?"white" : "#435585" , color:theme=="light"?"black":"white"}}>
         <img src={project.imageLink} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{project.projectTittle}</h5>

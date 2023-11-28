@@ -1,9 +1,13 @@
 import React from "react";
 import img from "./Images/dp.jpeg"
+import { useContext } from "react";
+import { ThemeContext } from "./Theme";
+
 const ContactMe = ({th}) => {
+  let {theme,setTheme} = useContext(ThemeContext)
   return (
     <div>
-      <section className="vh-100" style={{ backgroundColor: th.theme == "light"?"#2B3499":"black" , fontSize:"1.1rem"}}>
+      <section className="vh-100" style={{ backgroundColor: theme == "light"?"#2B3499":"black" , fontSize:"1.1rem"}}>
         <div className="container py-5 h-100 " style={{marginLeft:"10vw"}}>
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col col-lg-6 mb-4 mb-lg-0 ">

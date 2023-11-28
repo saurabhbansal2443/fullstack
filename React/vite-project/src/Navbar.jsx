@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import pdf from "./Images/resume.pdf";
+import { ThemeContext } from './Theme';
 
-const Navbar = ({th}) => {
+const Navbar = () => {
 
-  // console.log(props.dark);
+  let {theme,setTheme} = useContext(ThemeContext)
   let light = "navbar navbar-expand-lg  bg-body-tertiary ";
   let dark = "navbar navbar-expand-lg  navbar-dark bg-dark ";
   return (
-    <nav className={th.theme=="light" ? light : dark} >
+    <nav className={theme=="light" ? light : dark} >
   <div className="container-fluid" >
     <Link className="navbar-brand " to="/">SaurabhBansal</Link>
     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +32,7 @@ const Navbar = ({th}) => {
       </ul>
       
     </div>
-    <button style={{textTransform:"capitalize"}} type="button" className="btn btn-secondary " onClick={()=>th.theme=="light"?th.setTheme("dark"):th.setTheme("light")}> {th.theme} </button>
+    <button style={{textTransform:"capitalize"}} type="button" className="btn btn-secondary " onClick={()=>theme=="light"?setTheme("dark"):setTheme("light")}> {theme} </button>
   </div>
 </nav>
   )

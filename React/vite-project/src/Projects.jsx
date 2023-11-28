@@ -1,6 +1,9 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
+import { useContext } from 'react'
+import { ThemeContext } from './Theme'
 const Projects = ({th}) => {
+  let {theme,setTheme} = useContext(ThemeContext)
   let p1 = {
     imageLink : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvoepvuPOUAdZrY-BKITIPcAjDxnVIgkXskA&usqp=CAU",
     projectTittle : "Tic-Tac-Toe",
@@ -10,18 +13,18 @@ const Projects = ({th}) => {
   }
   
   return (
-    <div className="d-flex flex-wrap justify-content-around py-3 gap-3  w-100 vh-100" style={{backgroundColor:th.theme=="light"?"#f8f9fa" : "#212529"}}>
+    <div className="d-flex flex-wrap justify-content-around py-3 gap-3  w-100 vh-100" style={{backgroundColor:theme=="light"?"#f8f9fa" : "#212529"}}>
       
-      <ProjectCard project={p1} th={th}></ProjectCard>
-      <ProjectCard th={th}></ProjectCard>
+      <ProjectCard project={p1} ></ProjectCard>
+      <ProjectCard ></ProjectCard>
 
-      <ProjectCard th={th}></ProjectCard>
-      <ProjectCard th={th}></ProjectCard>
-      <ProjectCard th={th}></ProjectCard>
+      <ProjectCard ></ProjectCard>
+      <ProjectCard ></ProjectCard>
+      <ProjectCard ></ProjectCard>
 
-       <ProjectCard th={th}></ProjectCard>
-       <ProjectCard th={th}></ProjectCard>
-       <ProjectCard th={th}></ProjectCard>
+       <ProjectCard ></ProjectCard>
+       <ProjectCard ></ProjectCard>
+       <ProjectCard ></ProjectCard>
     </div>
   )
 }

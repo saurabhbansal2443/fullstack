@@ -1,13 +1,12 @@
 import React from 'react'
 import { createContext , useState } from 'react';
 
-export const th = createContext();
+export const ThemeContext = createContext();
 
-const Theme = ({prop}) => {
-const [theme , setTheme] = useState("light");
-
+const Theme = ({children}) => {
+    const [theme,setTheme] = useState("light");
   return (
-    <th.Provider value={{theme,setTheme}}>{prop}</th.Provider>
+    <ThemeContext.Provider value={{theme,setTheme}}>{children}</ThemeContext.Provider>
   )
 }
 
