@@ -2,9 +2,9 @@ import React from "react";
 import { useContext } from "react";
 import { ThemeContext } from "./Theme";
 
-const ProjectCard = ({project , th }) => {
+const ProjectCard = ({project}) => {
 
-  let {theme,setTheme} = useContext(ThemeContext)
+  let {theme} = useContext(ThemeContext)
   
     let p = {
         imageLink : "",

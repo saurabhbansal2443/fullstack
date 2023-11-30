@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import Theme from "./Theme.jsx";
+import SetTheme from "./Theme.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   
   <BrowserRouter>
-  <Theme>
+  <SetTheme>
       <App />
-      </Theme>
+      </SetTheme>
   </BrowserRouter>
   
 );
